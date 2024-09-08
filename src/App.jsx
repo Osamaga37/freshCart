@@ -123,7 +123,7 @@ let pages = createBrowserRouter([
       { path: "register", element: <Register /> },
       { path: "forgotpassword", element: <ForgotPassword /> },
       {
-        path: "verifyresetcode",
+        path: "verifycode",
         element: <VerifyCode />,
       },
       {
