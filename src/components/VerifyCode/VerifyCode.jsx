@@ -9,7 +9,9 @@ export default function VerifyCode() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  async function verifyCode(resetCode) {
+  async function verifyCode(values) {
+    console.log(values);
+    
     setIsLoading(true);
     try {
       setIsLoading(true)
@@ -17,10 +19,12 @@ export default function VerifyCode() {
      console.log(data);
      if(data.status=="Success")
      {
-      navigate("./resetpassword");
+      navigate("/resetpassword");
      }
   } catch (err) {
       setIsLoading(false)
+      console.log(err);
+      
       toast.error(err?.response?.data?.message);
   }
   }

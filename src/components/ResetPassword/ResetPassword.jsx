@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 export default function ResetPassword() {
   const [isLoading, setIsLoading] = useState(false);
   let navigate = useNavigate();
-  async function resetPassword(formValues) {
+  async function resetPassword(values) {
     setIsLoading(true);
     try {
       setIsLoading(true)
