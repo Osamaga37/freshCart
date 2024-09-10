@@ -8,6 +8,7 @@ export default function payment() {
   const [isLoading, setIsLoading] = useState(false);
   let { cartId, clearCartUi } = useContext(CartContext);
   const [isOnline, setIsOnline] = useState(false);
+  const currentUrl = window.location.href;
 
   function detectOnline(values) {
     if (isOnline) {
@@ -55,7 +56,7 @@ export default function payment() {
             token: window.localStorage.getItem("userToken"),
           },
           params: {
-            url: "http://localhost:5173/",
+            url: `${currentUrl}`,
           },
         }
       )
